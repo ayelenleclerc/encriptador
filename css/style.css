@@ -1,7 +1,7 @@
 /* Colores */
 :root {
     --light-blue-100: hsla(227, 60%, 97%, 1);
-    --dark-blue-300: hsla(213, 84%, 24%, 1);
+    --dark-blue-300: hsl(215, 75%, 25%);
     --white: hsla(0, 0%, 100%, 1);
     --gray-500: hsla(210, 10%, 23%, 1);
     --decoder-btn: hsla(214, 26%, 88%, 1);
