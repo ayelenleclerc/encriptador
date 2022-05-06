@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
-    <!--Fonts-->
+    <!--Fuentes-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
@@ -21,33 +21,29 @@
         <h1><img src="./img/logo.png" alt="logo de Alura"></h1>
     </header>
     <main>
-        <form class="text-input-section">
-            <textarea placeholder="ingrese el texto" autofocus id="inputUsuario"></textarea>
-            <p class="advertencia"><img src="./img/warning.png" alt="advertencia"> Solo ingrese minúsculas y sin acento
-            </p>
+        <section class="text-input-section">
+            <textarea cols="40" rows="8" placeholder="ingrese el texto" id="inputUsuario"
+                class="text-inputUsuario"></textarea>
+            <h6 class="text-advertencia">&#128073;solo letras minúsculas y sin acentos</h6>
             <div>
-                <button type="button" onclick="encriptar()">Encriptar</button>
-                <button type="button" onclick="desencriptar()">Desencriptar</button>
+                <button type="button" id="encriptar" class="btn btn-encriptar">Encriptar</button>
+                <button type="button" id="desencriptar" class="btn btn-desencriptar">Desencriptar</button>
             </div>
-        </form>
-
-        <aside>
-            <form>
-                <div id='mensajeVacio' class="mostrarMensajeVacio">
-                    <img src="./img/munhieco.png" alt="Ilustração de um texto vazio">
-                    <h3>Ningún mensaje encontrado</h3>
-                    <p>Ingrese el texto que quiere encriptar o desencriptar.</p>
-                </div>
-                <textarea id="mostrarMensaje"></textarea>
-                <button type="button" onclick="copiarTexto()" class="ocultarBtnCopiar" id="copiarBtn">Copiar</button>
-            </form>
-        </aside>
+        </section>
+        <section class="text-output-section">
+            <div id='mensajeVacio' class="mostrarMensajeVacio">
+                <img class="ilustracion" src="./img/munhieco.png" alt="Ilustración de un hombre con lupa">
+                <h3>Ningún mensaje encontrado</h3>
+                <p>Ingrese el texto que quiere encriptar o desencriptar.</p>
+            </div>
+            <textarea cols="18" rows="8" id="mostrarMensaje" class="text-outputUsuario"></textarea>
+            <button type="button" class=" btn ocultarBtnCopiar" id="copiarBtn">Copiar</button>
+        </section>
     </main>
     <footer>
-        <p>&copy; Copyright 2022 - <a href="https://github.com/ayelenleclerc">Ayelen Leclerc</a>
+        <p class="text-footer">&copy; Copyright 2022 - <a href="https://github.com/ayelenleclerc">Ayelen Leclerc</a>
         </p>
     </footer>
-
     <script src="./js/encriptador.js"></script>
 </body>
 
