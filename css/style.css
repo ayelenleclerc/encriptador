@@ -28,7 +28,7 @@ header {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-content: center;
+    align-content: flex-start;
     justify-content: flex-start;
     align-items: center;
 }
@@ -46,7 +46,10 @@ section {
 }
 
 .text-inputUsuario {
-    margin: top 90px;
+    width: 100%;
+    padding: 16px;
+    height: 500px;
+    margin: 0 auto;
     border: none;
     resize: none;
 }
@@ -85,25 +88,38 @@ section {
 .text-output-section {
     position: relative;
     background-color: #fff;
-    height: 550px;
+    width: 30%;
+    height: 700px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     align-content: center;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     border-radius: 15px;
+    top: -50px;
+    left: 90px;
+    box-shadow: 2px 2px 20px rgb(0 0 0 / 50%);
+}
+
+.text-outputUsuario {
+    width: 100%;
+    height: 550px;
+    padding: 16px;
+    background-color: #fff;
 }
 
 .mostrarMensajeVacio {
-    position: absolute;
+    position: relative;
     display: flex;
     background-color: #fff;
-    width: 100%;
+    width: 90%;
     flex-direction: column;
     align-content: center;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
 }
 
 .mostrarMensajeVacio h3,
@@ -124,19 +140,6 @@ p {
     background-color: #fff;
 }
 
-
-.text-outputUsuario {
-    background-color: #fff;
-    margin: 0 auto;
-    resize: none;
-    width: 95%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-}
 
 .ocultarMensajeVacio {
     display: none;
@@ -168,4 +171,151 @@ p {
     text-decoration: none;
     font-size: 16px;
     color: var(--dark-blue-300);
+}
+
+@media screen and (max-width: 480px) {
+
+    header {
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: flex-start;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+
+    section {
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+
+    .text-inputUsuario {
+        min-height: 300px;
+        margin: top 90px;
+    }
+
+    .botones {
+        display: flex;
+    }
+
+    .text-output-section {
+        width: 95%;
+        height: 450px;
+        margin: 0;
+        top: 10px;
+        left: 0;
+        padding: 10px;
+    }
+
+    .mostrarMensajeVacio {
+        display: flex;
+        position: absolute;
+        width: 95%;
+    }
+
+    .mostrarMensajeVacio h3,
+    p {
+        color: var(--dark-blue-300);
+        font-size: 24px;
+        background-color: transparent;
+        text-align: center;
+    }
+
+    .ilustracion {
+        display: none;
+    }
+
+    .ocultarBtnCopiar {
+        align-self: center;
+        left: 0;
+        bottom: 0;
+    }
+
+    .text-outputUsuario {
+        width: 100%;
+        height: 100%;
+        border: none;
+        resize: none;
+        background-color: transparent;
+    }
+}
+
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+    header {
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+
+    section {
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+
+    .text-inputUsuario {
+        min-height: 300px;
+        margin: top 90px;
+    }
+
+    .text-advertencia {
+        margin-left: 80px;
+    }
+
+    .botones {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .text-output-section {
+        width: 95%;
+        height: 450px;
+        margin: 0;
+        top: 10px;
+        left: 0;
+        padding: 10px;
+    }
+
+    .mostrarMensajeVacio {
+        position: absolute;
+        width: 95%;
+    }
+
+    .mostrarMensajeVacio h3,
+    p {
+        color: var(--dark-blue-300);
+        font-size: 24px;
+        background-color: transparent;
+        text-align: center;
+    }
+
+    .ilustracion {
+        display: none;
+    }
+
+    .ocultarBtnCopiar {
+        left: 0;
+        bottom: 0;
+    }
+
+    .text-outputUsuario {
+        width: 100%;
+        height: 100%;
+        border: none;
+        resize: none;
+        background-color: transparent;
+    }
 }

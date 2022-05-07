@@ -22,6 +22,7 @@ encriptar.addEventListener("click", function () {
     .replace(/u/g, "ufat")
     .replace(/a/g, "ai");
   document.getElementById("mostrarMensaje").innerHTML = encriptar;
+  inputUsuario = document.getElementById("inputUsuario").value = "";
 });
 
 desencriptar.addEventListener("click", function () {
@@ -37,6 +38,7 @@ desencriptar.addEventListener("click", function () {
     .replace(/ai/g, "a")
     .replace(/ufat/g, "u");
   document.getElementById("mostrarMensaje").innerHTML = desencriptar;
+  inputUsuario = document.getElementById("inputUsuario").value = "";
 });
 
 copiarTexto.addEventListener("click", function () {

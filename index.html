@@ -22,10 +22,9 @@
     </header>
     <main>
         <section class="text-input-section">
-            <textarea cols="40" rows="8" placeholder="ingrese el texto" id="inputUsuario"
-                class="text-inputUsuario"></textarea>
+            <textarea placeholder="ingrese el texto" id="inputUsuario" class="text-inputUsuario"></textarea>
             <h6 class="text-advertencia">&#128073;solo letras minúsculas y sin acentos</h6>
-            <div>
+            <div class="botones">
                 <button type="button" id="encriptar" class="btn btn-encriptar">Encriptar</button>
                 <button type="button" id="desencriptar" class="btn btn-desencriptar">Desencriptar</button>
             </div>
@@ -36,7 +35,7 @@
                 <h3>Ningún mensaje encontrado</h3>
                 <p>Ingrese el texto que quiere encriptar o desencriptar.</p>
             </div>
-            <textarea cols="18" rows="8" id="mostrarMensaje" class="text-outputUsuario"></textarea>
+            <textarea id="mostrarMensaje" class="text-outputUsuario"></textarea>
             <button type="button" class=" btn ocultarBtnCopiar" id="copiarBtn">Copiar</button>
         </section>
     </main>
